@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+ 
+  <body>
+    <div id="background2"></div>
+    <div class="main2">
+      <h1>Bienvenue chez strateg.in <%= name%>!!</h1>
+      <p>La transformation numérique pour votre entreprise</p>
+      <form action="/logout?_method=DELETE" method="POST">
+        <button type="submit">Se déconnecter </button>
+      </form>
+   </div>
+  </body>
+</html>
