@@ -27,6 +27,7 @@ initializePassport(
   }
 );
 
+
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(flash());
@@ -42,17 +43,21 @@ app.use(passport.session());
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
 
+
 app.get("/", checkAuthenticated, (req, res) => {
   res.render("index", { name: req.user.name });
 });
+
 
 app.get("/register", checkNotAuthenticated, (req, res) => {
   res.render("register");
 });
 
+
 app.get("/login", checkNotAuthenticated, (req, res) => {
   res.render("login");
 });
+
 
 app.post(
   "/login",
